@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(218, 44%, 22%);
+  --color-secondary: hsl(216, 15%, 48%);
+  --color-bg: hsl(212, 45%, 89%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsla(0, 6%, 94%, 0.418);
+
+  --font-main: "Outfit", sans-serif;
+
+  --shadow-sm: 0 10px 10px -5px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-grey);
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+a {
+  text-decoration: none;
+  color: rgba(49, 49, 49, 0.979);
+}
+
+.logo_title {
+  color: rgba(216, 214, 214, 0.979);
+}
+
+.logo_title span {
+  color: black;
+}
+
+.main_header {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+  /* border: 1px solid 214; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Assure que le header passe au-dessus des images et du contenu */
+  transition:
+    padding 0.3s ease,
+    background-color 0.3s ease; /* Pour l'animation future */
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 450px; /* Limite la largeur sur grand écran */
+  background-color: #e2e2e2fa; /* Fond gris clair moderne type Apple */
+  border: 1px solid transparent;
+  border-radius: 20px; /* Bords arrondis stylisés */
+  padding: 6px 15px;
+  transition: all 0.3s ease;
+}
+
+/* L'Input à l'intérieur */
+.search_container input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 35px 8px 5px; /* Espace à droite pour ne pas chevaucher l'icône */
+  font-size: 15px;
+  color: #292929;
+  outline: none; /* Supprime la bordure bleue par défaut du navigateur */
+}
+
+.search_container input::placeholder {
+  color: #999;
+}
+
+/* L'icône de recherche positionnée à droite */
+.search_icon {
+  position: absolute;
+  right: 15px;
+  width: 18px;
+  /* height: 18px; */
+  stroke: #666;
+  cursor: pointer;
+  transition: stroke 0.3s ease;
+}
+
+/* ANIME LE BLOC QUAND ON CLIQUE SUR L'INPUT */
+/* :focus-within cible le conteneur dès qu'un élément enfant a le focus */
+.search_container:focus-within {
+  background-color: #ffffff;
+  border-color: #000000; /* Bordure noire chic au focus */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.search_container:focus-within .search_icon {
+  stroke: #000000; /* L'icône devient plus foncée aussi */
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20.5rem);
+  gap: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  /* max-width: 360px; */
+  /* max-height: 280px; */
+  padding: 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.img_wrapper {
+  background-color: var(--color-grey);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .img_wrapper:hover {
+  box-shadow: var(--shadow-sm);
+} */
+
+.card_img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product_brand {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.product_name {
+  /* color: var(--color-primary); */
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+}
+
+/* --- Section Price & Button --- */
+.product_price_section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.product_price_label {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.1rem;
+}
+
+.product_price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--font-main);
+}
+
+.product_price span {
+  font-size: 0.9rem;
+  margin-right: 2px;
+}
+
+/* --- Button --- */
+.card_btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card_btn:hover {
+  background-color: var(--color-secondary);
+}
+
+.card_btn:active {
+  opacity: 0.5;
+}
+
+@media (max-width: 400px) {
+  .grid_container {
+    /* On oublie le 22.5rem, on prend toute la largeur disponible */
+    grid-template-columns: 100%;
+  }
+
+  .card {
+    padding: 1rem; /* On gagne de la place à l'intérieur de la carte */
+  }
+
+  .img_wrapper {
+    padding: 1rem; /* Moins de vide autour de la chaussure */
+  }
+}

@@ -1,0 +1,32 @@
+/*
+COLOR
+
+light: #FDDD93
+Medium: #FCC264
+Dark: #B67140
+Bold: #492817
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+  background-image:
+    linear-gradient(#fddd93, #fcc264, #b67140), url(../image/avatar/avatar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
