@@ -3,9 +3,11 @@
   --color-bg: #ffffff; /* fond de page */
   --color-surface: #f8f9fa; /* fond des cartes produit */
   --color-text: #000000; /* texte principal - 21:1 sur bg */
-  --color-text-muted: #50595E; /* texte secondaire, moins important - 7.16:1 sur bg / 6.79:1 sur surface */
+  --color-text-muted: #50595e; /* texte secondaire, moins important - 7.16:1 sur bg / 6.79:1 sur surface */
   --color-border: #e3e3e0; /* traits de séparation */
   --color-accent: #2461b6; /* boutons, liens, prix — UNE seule couleur vive - 6.06:1 sur bg / 5.75:1 sur surface */
+  --color-accent-hover: #1a4a8f;  
+  --shadow-sm: 0 10px 10px -5px rgba(0, 0, 0, 0.15);
 
   /* TYPOGRAPHY */
   --text-sm: 0.875rem; /* 14px — détails, mentions */
@@ -14,7 +16,7 @@
   --text-xl: 1.5rem; /* 24px — prix */
   --text-2xl: 2rem; /* 32px — titre de page */
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --sans: "Outfit", system-ui, Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   /* LAYOUT */
