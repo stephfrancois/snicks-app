@@ -1,8 +1,7 @@
+import type { Cents } from "../src/types/product";
 // const priceArray:number[] = [86.99, 125.75, 109.99];
 // const subTotalPrice: number = priceArray.reduce((acc, currentValue)=> acc + currentValue,0);
 // console.log(subTotalPrice)
-
-type Cents = number;
 
 const nikeDunkLowPrice:Cents = 8699;
 const airJordanLowPrice: Cents = 60499;
