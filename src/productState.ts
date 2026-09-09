@@ -6,7 +6,7 @@ interface SneakerProduct{
     imageSrc: string;
 }
 
-const sneakerObjNike:SneakerProduct ={
+ export const sneakerObjNike:SneakerProduct ={
     id:"1",
     brand: "Nike",
     name:"Nike Dunk Low 'Game Royal Navy'",
@@ -22,3 +22,5 @@ const finalPrice: number= price - discount;
 
 let cartQuantity:number = 0;
 cartQuantity++; 
+
+console.log(model, brand,discount, finalPrice)
