@@ -3,7 +3,7 @@ type OrderStatus = "pending" | "shipped" | "delivered" | "cancelled";
 
 // 2. Écris une fonction qui décrit chaque statut en français
 
-function describeStatus(status: OrderStatus): string {
+export function describeStatus(status: OrderStatus): string {
   switch (status) {
     case "pending":
       return "En attente";
