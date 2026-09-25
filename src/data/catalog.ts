@@ -5,6 +5,7 @@ const dunkLowRoyal: Product = {
   brand: "Nike",
   name: "Nike Dunk Low 'Game Royal Navy'",
   priceInCents: 8699,
+  discountRate:0.1,
   imageUrl: "image/sneakers/nike-dunk-low-game-royal-navy_1.webp",
   imageAlt: "Nike Dunk Low 'Game Royal Navy'",
 };
