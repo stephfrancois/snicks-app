@@ -65,6 +65,15 @@ const jordanMidSmoke: Product = {
   imageAlt: "Air Jordan 1 Mid 'Smoke Grey Anthracite'",
 };
 
+const jordanRetro: Product = {
+  id: "snk-jordanRetro",
+  brand:"Nike",
+  name:"Air Jordan 1 Retro High 'Light Smoke Grey'",
+  priceInCents: 12155,
+  imageUrl:"image/sneakers/air-jordan-1-retro-high-light-smoke-grey-555088-126_1.webp",
+  imageAlt:"Air Jordan 1 Retro High 'Light Smoke Grey'",
+};
+
 export const products: Product[] = [
   dunkLowRoyal,
   airJordan,
@@ -73,4 +82,5 @@ export const products: Product[] = [
   dunkLowPremium,
   dunkLowSb,
   jordanMidSmoke,
+  jordanRetro
 ];

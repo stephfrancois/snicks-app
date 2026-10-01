@@ -1,7 +1,9 @@
-const brandName: string = "Snicks";
-const launchYear: number = 2026;
+import "./css/style.css";
+import { products } from "./data/catalog";
+import { renderProductCard } from "./render/productCard";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<h1>${brandName}</h1>
-<p>Depuis ${launchYear}</p>
-`;
+const grid = document.querySelector<HTMLElement>(".grid_container");
+
+if (grid) {
+  grid.innerHTML = products.map(renderProductCard).join("");
+}
